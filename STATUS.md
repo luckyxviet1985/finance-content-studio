@@ -3,32 +3,30 @@
 Last updated: 2026-07-26
 
 ## Current milestone
-
-Milestone 1 — Governance and foundations
+Milestone 1 — Decisions and delivery foundation
 
 ## State
-
 In progress
 
 ## Completed
-
-- GitHub connector installed and repository access verified.
-- Initial requirements reviewed.
-- System architecture, database proposal, agent architecture, workflow state machine, roadmap, and first 20 issue specifications approved.
-- Four mandatory human approval gates established as architectural invariants.
+- GitHub connector and repository access verified.
+- Architecture package approved.
+- Hosting, data platform, region, orchestration approach, providers, jurisdiction, retention, capacity, and vertical-slice priority approved.
+- Four mandatory human approval gates established.
+- Initial ADRs, risk register, backlog, and runbook recorded.
 
 ## In progress
+- Updating tracking to the approved vertical-slice plan.
+- Establishing repository and implementation foundation.
+- Building persisted workflow, evidence, and topic-approval primitives.
 
-- Recording foundational decisions.
-- Defining editorial/compliance policy.
-- Establishing repository, CI, security, and operating standards.
+## External setup needed before later stages
+- Supabase project credentials
+- OpenAI API credential
+- YouTube OAuth client and target channel authorization
+- Render service connection
 
-## Blockers
+These do not block local foundation work.
 
-- Workflow engine selection requires evaluation.
-- Provider selections and applicable compliance jurisdictions require owner decisions.
-- Expected channel volume, language, and format targets require confirmation.
-
-## Next checkpoint
-
-Milestone 1 exit review. No production feature implementation proceeds until its governance and foundation criteria are satisfied.
+## Next approval gate
+A functioning Topic Approval checkpoint with persisted topic evidence, score, workflow state, and immutable approval record.
