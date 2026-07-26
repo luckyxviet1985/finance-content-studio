@@ -1,47 +1,45 @@
 # Product roadmap
 
-Architecture approved: 2026-07-26
+Architecture approved: 2026-07-26  
+Current strategy: one end-to-end vertical slice before platform breadth.
 
-## Milestone 1 — Governance and foundations
+## Milestone 1 — Decisions and delivery foundation
 
-Goal: establish the engineering, editorial, compliance, security, and operational contract before feature development.
+- Record approved architecture and provider decisions.
+- Establish repository, CI, security, compliance, and operating standards.
+- Scaffold the Render/Supabase/OpenAI application.
+- Implement durable workflow records, immutable artifacts, provenance, and approval primitives.
+- Exit gate: a persisted, reviewable Topic Approval experience.
 
-Deliverables:
-- Foundational architecture decision records
-- Finance editorial and compliance policy v1
-- Repository, CI, review, and documentation standards
-- Threat model and data classification
-- Environment and secrets strategy
-- Initial service-level objectives and observability conventions
-- Approved Milestone 2 implementation backlog
+## Milestone 2 — Research, script, and verification
 
-Exit criteria:
-- Product, engineering, editorial, compliance, and operations owners approve the foundational decisions.
-- No critical architectural question is unowned.
-- CI and protected-branch requirements are documented.
-- Risks have owners, mitigations, and review cadence.
-- The runbook defines incident, rollback, and approval-integrity procedures.
+- OpenAI Responses API agent runtime
+- Research dossier and source snapshots
+- Script versions and claim ledger
+- Independent fact checking and compliance validation
+- Exit gate: Script Approval
 
-## Milestone 2 — Control plane and workflow skeleton
+## Milestone 3 — Media and final-video package
 
-Identity/RBAC, channels, projects, artifacts, audit trail, durable workflow, approval engine, and operator dashboard.
+- Storyboard, OpenAI voice, OpenAI images, charts, Remotion, FFmpeg, captions, thumbnails, and QC
+- Exit gate: Final Video Approval
 
-## Milestone 3 — Discovery and topic approval
+## Milestone 4 — Private upload
 
-Source ingestion, snapshots, clustering, market evidence, scoring, and editorial board.
+- YouTube OAuth, idempotent private upload, metadata reconciliation
+- Exit gate: private YouTube asset ready for review
 
-## Milestone 4 — Research, scripting, fact checking, and compliance
+## Milestone 5 — Public release and analytics
 
-Research fan-out/fan-in, dossiers, scripts, claims, verification, compliance, and script approval.
+- Distinct Public Publishing Approval
+- YouTube public/scheduled transition
+- YouTube Analytics ingestion and controlled feedback
 
-## Milestone 5 — Media production and final approval
+## Deferred until vertical slice completion
 
-Storyboards, visuals, charts, voice, captions, thumbnails, rendering, and audiovisual QC.
-
-## Milestone 6 — Private upload and controlled publishing
-
-Idempotent private upload, metadata reconciliation, final publishing gate, and public/scheduled release.
-
-## Milestone 7 — Analytics and hardening
-
-Analytics feedback, controlled optimization, recovery drills, security review, cost controls, and launch readiness.
+- SaaS product features
+- Billing
+- Multi-user collaboration
+- Multiple channels
+- Broad provider marketplace
+- Autonomous public publishing
