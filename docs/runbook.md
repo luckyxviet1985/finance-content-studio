@@ -1,62 +1,49 @@
 # Operations runbook
 
-## Operating principles
+## Deployment topology
+- Render US East: web service, general worker, render worker
+- Supabase: Postgres, Auth, Storage
+- OpenAI: Responses, image generation, audio
+- YouTube: Data and Analytics APIs
+- Remotion and FFmpeg: deterministic video assembly
 
-- Safety and approval integrity outrank throughput.
-- PostgreSQL is authoritative for workflow state.
-- Preserve evidence before remediation.
-- External mutations must be reconciled before retry.
-- Public publishing requires a distinct human Publisher approval.
-
-## Standard project recovery
-
-1. Identify project, workflow instance, current state, and last successful task.
-2. Confirm database state and artifact checksums.
-3. Classify the failure as transient, provider, validation, policy, data, or operator error.
-4. Reconcile any external action using its idempotency key.
+## Local/application recovery
+1. Identify project, workflow instance, state, and last successful task.
+2. Confirm Supabase database state and artifact checksums.
+3. Classify the failure: transient, provider, validation, policy, data, or operator.
+4. Reconcile external actions using idempotency keys.
 5. Retry only from a safe workflow boundary.
-6. Record operator action and outcome in the audit trail.
+6. Audit the operator action and outcome.
 
 ## Approval-integrity incident
+1. Freeze the workflow.
+2. Block upload and public-state changes.
+3. Preserve audit, artifact, prompt, model, source, and tool records.
+4. Invalidate approvals attached to changed or uncertain versions.
+5. Escalate to Engineering and Compliance.
+6. Resume only after a documented decision.
 
-Examples: missing approval, approval attached to the wrong version, unauthorized approver, or transition bypass.
-
-1. Freeze the workflow immediately.
-2. Prevent upload or public-state changes.
-3. Preserve audit, artifact, prompt, model, and tool records.
-4. Identify affected projects and invalidate questionable approvals.
-5. Escalate to Engineering, Compliance, and the Publisher owner.
-6. Resume only after a documented incident decision.
-
-## Accidental or incorrect YouTube publication
-
-1. Reconcile the remote YouTube state.
-2. Set the asset to private if authorized and operationally safe.
+## Incorrect YouTube publication
+1. Reconcile remote state.
+2. Set private if authorized and safe.
 3. Freeze related workflows.
-4. Notify the Publisher, Editorial, Compliance, and incident owner.
-5. Preserve remote identifiers, timestamps, decisions, and logs.
+4. Notify Publisher, Editorial, Compliance, and incident owner.
+5. Preserve identifiers, timestamps, decisions, and logs.
 6. Complete root-cause analysis before re-enabling publishing.
 
-## Provider outage
-
+## OpenAI/provider outage
 1. Confirm provider health and rate-limit state.
-2. Pause affected tasks and prevent retry storms.
-3. Use a fallback only when the adapter policy authorizes it.
-4. Validate output compatibility after failover.
+2. Pause tasks and prevent retry storms.
+3. Do not change providers outside the approved adapter policy.
+4. Validate output compatibility after recovery.
 5. Record cost and quality impact.
 
 ## Secret exposure
-
 1. Revoke or rotate the credential.
-2. Stop affected workers and integrations.
-3. Identify logs, prompts, artifacts, and external calls containing the secret.
-4. Contain access and follow the incident policy.
+2. Stop affected Render services and integrations.
+3. Identify logs, prompts, artifacts, and calls containing the secret.
+4. Contain access and follow incident policy.
 5. Add regression prevention before restoration.
 
-## Milestone 1 operational exit
-
-- Owners and escalation contacts assigned.
-- Backup and restore approach documented.
-- Approval-integrity and accidental-publish drills designed.
-- SLOs and alert ownership approved.
-- Provider and secret inventories established.
+## Capacity posture
+Scale web, general worker, and render worker independently. Initial target is two long-form and five Shorts weekly; capacity planning must support one long-form and three Shorts daily without changing domain architecture.
