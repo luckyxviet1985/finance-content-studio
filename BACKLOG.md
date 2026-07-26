@@ -1,26 +1,35 @@
 # Backlog
 
-## Milestone 1 — Governance and foundations
+## Current critical path
 
-### P0
-- Record and approve foundational ADRs.
-- Define finance editorial and compliance policy v1.
-- Establish repository, CI, review, and documentation standards.
-- Produce threat model and data classification.
-- Define secrets, environments, and access-control strategy.
-- Define approval-integrity tests and audit requirements.
+1. Repository and CI foundation
+2. Supabase schema and local development contract
+3. Lightweight durable workflow state machine
+4. Artifact, source, claim, provenance, and approval primitives
+5. Topic candidate ingestion and evidence capture
+6. Versioned topic scoring
+7. Topic approval API and operator view
+8. Research agent and dossier
+9. Script agent and claim extraction
+10. Fact check and educational-content compliance
+11. Script approval
+12. Storyboard, voice, visuals, captions, and thumbnail
+13. Remotion/FFmpeg render and QC
+14. Final-video approval
+15. Idempotent private YouTube upload
+16. Public publishing approval
+17. Analytics feedback
 
-### P1
-- Evaluate and select the durable workflow engine.
-- Define initial SLOs, logs, metrics, traces, and alert ownership.
-- Define provider evaluation rubric and fallback policy.
-- Define retention and deletion policy.
-- Run architecture and operational readiness review.
+## Milestone 1 P0
+- Complete issue #3 repository and CI standards.
+- Complete issue #4 threat model and data classification.
+- Complete issue #5 environment, secrets, retention, and access strategy.
+- Implement foundation through Topic Approval.
 
-## Later milestones
-
-The approved architecture package contains the first 20 issue-ready specifications spanning the control plane, discovery, research, scripts, verification, compliance, media, publishing, and analytics.
-
-## Backlog policy
-
-Each item must have an owner, acceptance criteria, risk classification, dependencies, and milestone before implementation begins. P0 items block the milestone exit.
+## Explicitly deferred
+- SaaS and billing
+- Multi-user collaboration
+- Multiple channels
+- ElevenLabs implementation
+- Autonomous public publishing
+- Scale-specific infrastructure not needed for the approved capacity target
