@@ -3,57 +3,63 @@
 Status values: Proposed, Accepted, Superseded, Rejected.
 
 ## ADR-001 — Modular monolith with isolated workers
-
 Status: Accepted  
-Decision: Use a modular monolith for API and domain logic, with separately scalable agent, collection, media, render, and analytics workers.  
-Reason: Preserve transactional consistency and policy enforcement while allowing expensive workloads to scale independently.
+Decision: Use a modular monolith for API and domain logic, with separable worker processes for agents, media, rendering, and analytics.
 
-## ADR-002 — PostgreSQL as system of record
-
+## ADR-002 — Supabase as managed platform foundation
 Status: Accepted  
-Decision: Store business, workflow, approval, audit, and provenance state in PostgreSQL. Queues and caches are never authoritative.  
-Reason: Strong consistency, relational integrity, JSONB escape hatches, and operational maturity.
+Decision: Use Supabase Postgres as the system of record, Supabase Auth for the initial operator identity, and Supabase Storage for artifacts. Queues and caches are not authoritative.
 
-## ADR-003 — Immutable artifact registry and object storage
-
+## ADR-003 — Immutable artifact registry
 Status: Accepted  
-Decision: Store artifact metadata and checksums in PostgreSQL and content in S3-compatible object storage. Revisions create new versions.  
-Reason: Reproducibility, approval pinning, lifecycle management, and efficient large-object storage.
+Decision: Store artifact metadata and checksums in Postgres and content in Supabase Storage. Revisions create new versions. No automatic deletion during development.
 
-## ADR-004 — Durable orchestrator owns workflow state
-
-Status: Accepted in principle; product selection pending.  
-Decision: A durable workflow engine owns state transitions, retries, timers, fan-out/fan-in, compensation, and human waits. Agents cannot advance state directly.  
-Reason: Production runs last hours or days and must survive interruption safely.
-
-## ADR-005 — Provider adapter boundary
-
+## ADR-004 — Lightweight application orchestrator
 Status: Accepted  
-Decision: Market data, search/news, models, images, voice, rendering, storage, and YouTube use capability-based adapters.  
-Reason: Avoid provider lock-in and standardize health, cost, rate-limit, error, and idempotency behavior.
+Decision: Use the OpenAI Responses API for agent execution and a lightweight, durable application orchestrator backed by explicit state and task records in Postgres.  
+Migration boundary: Domain workflow definitions, state-transition rules, task contracts, idempotency keys, and approval records must not depend on orchestrator internals so Temporal or another engine can replace it later.
 
-## ADR-006 — Four mandatory human approval gates
-
+## ADR-005 — Render deployment in US East
 Status: Accepted  
-Decision: Require topic, script, final-video, and public-publishing approvals. Approvals pin immutable versions and are invalidated by material dependency changes.  
-Reason: Finance-content safety, editorial control, and release accountability.
+Decision: Deploy the application and worker services to Render in US East. Use separately scalable web, general worker, and render worker processes.
 
-## ADR-007 — Private-first YouTube publishing
-
+## ADR-006 — Provider adapter boundary
 Status: Accepted  
-Decision: Upload as private by default. A distinct human Publisher approval is required before scheduling or making public.  
-Reason: Prevent accidental publication and separate content approval from release authorization.
+Decision:
+- LLM: OpenAI
+- Images: OpenAI image generation
+- Voice: OpenAI audio initially, behind a provider interface compatible with a future ElevenLabs adapter
+- Video: Remotion and FFmpeg
+- Publishing: YouTube Data API
+- Analytics: YouTube Analytics API
 
-## ADR-008 — Agent outputs are untrusted proposals
-
+## ADR-007 — Four mandatory human approval gates
 Status: Accepted  
-Decision: Agents have bounded tools and typed outputs. Deterministic services validate schemas, policy, provenance, and authorization before persistence or action.  
-Reason: Limit hallucination, prompt injection, privilege escalation, and uncontrolled side effects.
+Decision: Require topic, script, final-video, and public-publishing approvals. Approvals pin immutable versions and are invalidated by material changes.
 
-## Open decisions
+## ADR-008 — Private-first YouTube publishing
+Status: Accepted  
+Decision: Upload privately. Public or scheduled release requires a distinct human Publisher decision.
 
-- Durable workflow engine selection
-- Hosting platform and region
-- Initial market-data, search, model, image, voice, and render providers
-- Applicable compliance jurisdictions
-- Retention periods and expected production volume
+## ADR-009 — Educational US finance content
+Status: Accepted  
+Decision: Initial audience is the United States and content is educational. The system must avoid personalized financial advice and require source-backed factual claims.
+
+## ADR-010 — Single-channel vertical slice before platform features
+Status: Accepted  
+Decision: Build one end-to-end path—Topic → Research → Script → Fact Check → Storyboard → Voice → Visuals → Render → Private Upload—before SaaS, billing, multi-user, or multi-channel functionality.
+
+## ADR-011 — Capacity target without redesign
+Status: Accepted  
+Decision: Initial production is two long-form videos and five Shorts per week. The architecture must scale by adding workers and capacity to one long-form and three Shorts per day without redesign.
+
+## ADR-012 — Agent outputs are untrusted proposals
+Status: Accepted  
+Decision: Agents have bounded tools and typed outputs. Deterministic services validate schemas, policy, provenance, and authorization before persistence or action.
+
+## Remaining implementation-level decisions
+- Exact OpenAI model policy by agent task
+- Supabase project and credential provisioning
+- YouTube OAuth client and target channel provisioning
+- Render service sizing and deployment pipeline
+- Production retention schedule after development
