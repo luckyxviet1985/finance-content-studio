@@ -1,0 +1,40 @@
+[
+  {
+    "source_id": "src-loc-bank-run-photo",
+    "kind": "image",
+    "title": "Bank of United States depositor crowd, 1931",
+    "publisher": "Library of Congress",
+    "catalog_url": "https://www.loc.gov/item/96521489/",
+    "rights_status": "no_known_restrictions_on_publication",
+    "rights_note": "Library of Congress catalog states no known restrictions on publication for this photograph.",
+    "intended_use": "opening bank-run visual and montage",
+    "ingestion_status": "pending"
+  },
+  {
+    "source_id": "src-fdr-fireside-photo",
+    "kind": "image",
+    "title": "Franklin D. Roosevelt during first Fireside Chat, March 12, 1933",
+    "publisher": "Franklin D. Roosevelt Presidential Library / National Archives",
+    "catalog_url": "https://commons.wikimedia.org/wiki/File:FDR-March-12-1933.jpg",
+    "rights_status": "public_domain",
+    "rights_note": "Public-domain archival image; verify upstream National Archives/FDR Library metadata at ingestion.",
+    "intended_use": "visual bed under narration and authentic FDR audio",
+    "ingestion_status": "pending"
+  },
+  {
+    "source_id": "src-fdr-fireside-audio",
+    "kind": "audio",
+    "title": "First Fireside Chat: On the Banking Crisis, March 12, 1933",
+    "publisher": "U.S. federal government / archival copy via Wikimedia Commons",
+    "catalog_url": "https://commons.wikimedia.org/wiki/File:Fireside_Chat_1_On_the_Banking_Crisis_(March_12,_1933)_Franklin_Delano_Roosevelt.ogg",
+    "rights_status": "public_domain",
+    "rights_note": "Wikimedia identifies the recording as public-domain U.S. government material. Preserve upstream provenance and file checksum.",
+    "intended_use": "12-second primary-source insert",
+    "clip": {
+      "start_seconds": 736,
+      "end_seconds": 748,
+      "transcript_anchor": "confidence of the people themselves"
+    },
+    "ingestion_status": "pending"
+  }
+]
