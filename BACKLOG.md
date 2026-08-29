@@ -26,6 +26,19 @@
 - Complete issue #5 environment, secrets, retention, and access strategy.
 - Implement foundation through Topic Approval.
 
+## Documentary Factory prototype — issue #7
+- [x] Add FDR project manifest.
+- [x] Add deterministic 72-second scene timeline.
+- [x] Add archival source and rights ledger.
+- [x] Add provider-neutral narration slot and primary-source audio clip metadata.
+- [x] Define media-ingestion/provenance contract.
+- [x] Add Remotion composition scaffold.
+- [ ] Connect manifest/source records to persisted artifact/provenance primitives once Milestone 1 foundation exists.
+- [ ] Ingest LOC/FDR archival binaries through the media worker.
+- [ ] Generate Open Montage test narration through the voice adapter.
+- [ ] Render and QC first real archival prototype.
+- [ ] Present immutable final-video artifact for human Final Video Approval.
+
 ## Explicitly deferred
 - SaaS and billing
 - Multi-user collaboration
