@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "audioSlotsVersion": 1,
+  "replacementPolicy": "A provider or media change creates a new audio-slots artifact version and invalidates script/final-video approvals.",
+  "slots": [
+    {
+      "id": "narration-main",
+      "kind": "generated-narration",
+      "requiredForRender": true,
+      "providerBinding": null,
+      "voiceBinding": null,
+      "input": {
+        "kind": "timeline-scene-text",
+        "timelineVersion": 1
+      },
+      "output": {
+        "status": "awaiting_generation",
+        "artifactVersion": null,
+        "path": "public/media/the-week-america-closed-every-bank/v1/narration-main.wav",
+        "mediaType": "audio/wav",
+        "sha256": null
+      }
+    },
+    {
+      "id": "fdr-archival-excerpt",
+      "kind": "archival-audio-clip",
+      "requiredForRender": true,
+      "providerBinding": null,
+      "sourceId": "fdr-fireside-audio-1933-03-12",
+      "clip": {
+        "inMs": 736000,
+        "outMs": 748000
+      },
+      "output": {
+        "status": "awaiting_ingestion",
+        "artifactVersion": null,
+        "path": "public/media/the-week-america-closed-every-bank/v1/fdr-fireside-chat-edited.ogg",
+        "mediaType": "application/ogg",
+        "sha256": "ab8d0e9229bfa9ca844828318e6ce8211a86b75a180e833296d6e0d0134ceffd"
+      }
+    },
+    {
+      "id": "music-bed",
+      "kind": "music",
+      "requiredForRender": false,
+      "providerBinding": null,
+      "licenseRecordId": null,
+      "output": {
+        "status": "optional_not_supplied",
+        "artifactVersion": null,
+        "path": null,
+        "mediaType": null,
+        "sha256": null
+      }
+    },
+    {
+      "id": "sound-design",
+      "kind": "sound-effects",
+      "requiredForRender": false,
+      "providerBinding": null,
+      "licenseRecordId": null,
+      "output": {
+        "status": "optional_not_supplied",
+        "artifactVersion": null,
+        "path": null,
+        "mediaType": null,
+        "sha256": null
+      }
+    }
+  ]
+}

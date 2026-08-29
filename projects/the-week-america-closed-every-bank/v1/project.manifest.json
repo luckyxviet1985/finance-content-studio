@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "title": "The Week America Closed Every Bank",
+  "format": "archival-documentary-short",
+  "lifecycleState": "prototype_scaffolded",
+  "issue": "https://github.com/luckyxviet1985/finance-content-studio/issues/8",
+  "channelScope": "single-channel-vertical-slice",
+  "artifacts": {
+    "timeline": {
+      "path": "timeline.v1.json",
+      "sha256": "f748e4b2286c54c1be57bb9b0b25606392e4859ab104b407c80367fab76a7261"
+    },
+    "sourceLedger": {
+      "path": "sources.v1.json",
+      "sha256": "de7bc9b255c3bc4ae602248aa4e653972e7546825c9d19181d9f104f7ce8c042"
+    },
+    "audioSlots": {
+      "path": "audio.slots.v1.json",
+      "sha256": "12fc73cdf37a76b0f0a0e45feb7b3fac80350285599533b3473ac73f80660a7b"
+    },
+    "mediaIngestion": {
+      "path": "media-ingestion.v1.json",
+      "sha256": "63551c2455521fbf663edd6c58a4c193fef5ea653a0fda4d36bb23d251cba74e"
+    },
+    "render": {
+      "path": "render.v1.json",
+      "sha256": "0653fdc39c33a09b26d440b61d5f731d6b1e373fc87bd38288c3608eda1969d1"
+    }
+  },
+  "approvalGates": {
+    "topic": {
+      "status": "pending",
+      "requiredBefore": "media_ingestion",
+      "approvalRecordId": null,
+      "pinnedArtifactVersion": null,
+      "invalidateOnChange": ["title", "format", "sourceLedger"]
+    },
+    "script": {
+      "status": "pending",
+      "requiredBefore": "render",
+      "approvalRecordId": null,
+      "pinnedArtifactVersion": null,
+      "invalidateOnChange": ["timeline", "sourceLedger"]
+    },
+    "finalVideo": {
+      "status": "pending",
+      "requiredBefore": "private_upload",
+      "approvalRecordId": null,
+      "pinnedArtifactVersion": null,
+      "invalidateOnChange": ["render", "timeline", "audioSlots", "sourceLedger"]
+    },
+    "publicPublishing": {
+      "status": "pending",
+      "requiredBefore": "public_or_scheduled_transition",
+      "approvalRecordId": null,
+      "pinnedArtifactVersion": null,
+      "invalidateOnChange": ["finalVideo", "publishingMetadata"]
+    }
+  },
+  "capabilities": {
+    "localRender": true,
+    "privateUpload": false,
+    "publicPublishing": false,
+    "autonomousRightsDecision": false,
+    "productionElevenLabs": false,
+    "multiChannel": false,
+    "dashboard": false
+  },
+  "provenance": {
+    "createdAt": "2026-08-29T02:00:00Z",
+    "createdBy": "issue-8-implementation",
+    "policyRefs": ["AGENTS.md", "docs/decisions.md#adr-007--four-mandatory-human-approval-gates"],
+    "revisionPolicy": "Any material change creates a new project version and invalidates affected approvals."
+  }
+}

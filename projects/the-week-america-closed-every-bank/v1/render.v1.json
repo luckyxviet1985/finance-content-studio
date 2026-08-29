@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "renderContractVersion": 1,
+  "compositionId": "DocumentaryPrototype",
+  "composition": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationFrames": 2100
+  },
+  "runtime": {
+    "remotion": "4.0.518",
+    "react": "19.2.8",
+    "ffmpeg": "operator-pinned-and-recorded-at-render"
+  },
+  "encoding": {
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "pixelFormat": "yuv420p",
+    "crf": 18,
+    "audioBitrate": "192k"
+  },
+  "requiredApprovalGates": ["topic", "script"],
+  "requiredArtifactStates": {
+    "narration-main": "ready",
+    "fdr-archival-excerpt": "ready"
+  },
+  "output": {
+    "path": "outputs/the-week-america-closed-every-bank-v1.mp4",
+    "overwrite": false,
+    "provenanceReceipt": "outputs/the-week-america-closed-every-bank-v1.render.json"
+  },
+  "publishing": {
+    "enabled": false,
+    "destinations": []
+  }
+}
