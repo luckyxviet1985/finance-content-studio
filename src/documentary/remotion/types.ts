@@ -62,3 +62,52 @@ export type DocumentaryProps = {
     approvalRecordIds: Record<string, string | null>;
   };
 };
+
+export type PreviewScene = {
+  id: string;
+  startFrame: number;
+  endFrame: number;
+  visual: {
+    kind: "procedural-placeholder";
+    motif:
+      | "bank-queue"
+      | "newspaper"
+      | "confidence-meter"
+      | "radio"
+      | "radio-wave"
+      | "reopening-bank"
+      | "end-card";
+    eyebrow: string;
+    headline: string;
+  };
+  draftText: string | null;
+  caption: string | null;
+};
+
+export type DocumentaryPreviewProps = {
+  mode: "unapproved-animatic-preview";
+  projectId: string;
+  projectVersion: number;
+  title: string;
+  timeline: {
+    fps: number;
+    durationFrames: number;
+    durationSeconds: number;
+    scenes: PreviewScene[];
+  };
+  composition: {
+    width: number;
+    height: number;
+    fps: number;
+    durationFrames: number;
+  };
+  watermark: {required: true; text: string};
+  audio: {status: "unavailable"; provider: null; reason: string};
+  publishing: {enabled: false; destinations: []};
+  provenance: {
+    timelineSha256: string;
+    renderContractSha256: string;
+    approvalStatuses: Record<string, string>;
+    previewPolicy: string;
+  };
+};
