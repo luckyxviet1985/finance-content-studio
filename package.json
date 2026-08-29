@@ -1,0 +1,26 @@
+{
+  "name": "finance-content-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/**/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "documentary:validate": "node scripts/documentary/validate-project.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
+    "documentary:ingest": "node scripts/documentary/ingest-media.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
+    "documentary:render-props": "node scripts/documentary/build-render-props.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
+    "documentary:render": "npm run documentary:render-props && remotion render src/documentary/remotion/index.ts DocumentaryPrototype outputs/the-week-america-closed-every-bank-v1.mp4 --props=work/render-props/the-week-america-closed-every-bank-v1.json --codec=h264 --crf=18 --pixel-format=yuv420p --audio-codec=aac --audio-bitrate=192k && npm run documentary:verify-render",
+    "documentary:verify-render": "node scripts/documentary/verify-render.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json outputs/the-week-america-closed-every-bank-v1.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2"
+  }
+}

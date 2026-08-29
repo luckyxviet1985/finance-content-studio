@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "ledgerVersion": 1,
+  "retrievedAt": "2026-08-29T02:00:00Z",
+  "legalNotice": "Rights fields record source claims and intended use. They are not autonomous legal conclusions. A human rights decision is required before media ingestion.",
+  "sources": [
+    {
+      "id": "loc-bank-run-1931",
+      "sourceVersion": 1,
+      "title": "Crowd of depositors gather in the rain outside Bank of United States after its failure",
+      "provider": "Library of Congress",
+      "originInstitution": "Library of Congress Prints and Photographs Division",
+      "originIdentifier": "LC-USZ62-117261",
+      "catalogUrl": "https://www.loc.gov/pictures/item/96521489/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/service/pnp/cph/3c10000/3c17000/3c17200/3c17261v.jpg",
+      "mediaType": "image/jpeg",
+      "expectedBytes": 181190,
+      "expectedSha256": "50a2894e884d3bb743c1fe11ebce3686da654fb2af833cc59f795263a6b364a6",
+      "createdOrPublished": "1931",
+      "intendedUse": "Opening bank-run visual and contextual B-roll with crop, pan, and zoom only.",
+      "rights": {
+        "claim": "no_known_restrictions_on_publication",
+        "claimSource": "Library of Congress rights advisory for NYWT&S staff photographs",
+        "evidenceUrl": "https://www.loc.gov/pictures/item/96521489/",
+        "territory": "unspecified",
+        "reviewStatus": "pending",
+        "decisionId": null,
+        "reviewerId": null,
+        "decidedAt": null
+      }
+    },
+    {
+      "id": "nara-fdr-fireside-photo-1933-03-12",
+      "sourceVersion": 1,
+      "title": "President Franklin D. Roosevelt broadcasting his first Fireside Chat regarding the banking crisis",
+      "provider": "Wikimedia Commons mirror",
+      "originInstitution": "National Archives and Records Administration — Franklin D. Roosevelt Library",
+      "originIdentifier": "NAID 6728517",
+      "catalogUrl": "https://commons.wikimedia.org/wiki/File:FDR-March-12-1933.jpg",
+      "originCatalogUrl": "https://docsteach.org/document/fdr-first-fireside-chat/",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/FDR-March-12-1933.jpg",
+      "mediaType": "image/jpeg",
+      "expectedBytes": 876872,
+      "expectedSha256": "241cd0f965be1852d4effd01b8add206dd404d565d1356eadfa42e7805e10946",
+      "createdOrPublished": "1933-03-12",
+      "intendedUse": "Visual for the radio address setup and the authentic archival excerpt.",
+      "rights": {
+        "claim": "public_domain_us_government_work",
+        "claimSource": "Wikimedia Commons record pointing to NARA NAID 6728517",
+        "evidenceUrl": "https://commons.wikimedia.org/wiki/File:FDR-March-12-1933.jpg",
+        "territory": "United States",
+        "reviewStatus": "pending",
+        "decisionId": null,
+        "reviewerId": null,
+        "decidedAt": null
+      }
+    },
+    {
+      "id": "fdr-fireside-audio-1933-03-12",
+      "sourceVersion": 1,
+      "title": "Fireside Chat 1: On the Banking Crisis (edited recording)",
+      "provider": "Wikimedia Commons mirror",
+      "originInstitution": "Franklin D. Roosevelt Presidential Library and Museum",
+      "originIdentifier": "65-9:2(1-2) [dig]. RLxA-4",
+      "catalogUrl": "https://commons.wikimedia.org/wiki/File:Fireside_Chat_1_On_the_Banking_Crisis_(March_12,_1933)_Franklin_Delano_Roosevelt_edited.ogg",
+      "originCatalogUrl": "https://www.fdrlibrary.org/utterancesfdr",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Fireside_Chat_1_On_the_Banking_Crisis_%28March_12%2C_1933%29_Franklin_Delano_Roosevelt_edited.ogg",
+      "mediaType": "application/ogg",
+      "expectedBytes": 6638546,
+      "expectedSha256": "ab8d0e9229bfa9ca844828318e6ce8211a86b75a180e833296d6e0d0134ceffd",
+      "createdOrPublished": "1933-03-12",
+      "sourceDurationMs": 785637,
+      "clip": {
+        "inMs": 736000,
+        "outMs": 748000,
+        "purpose": "Authentic FDR statement about public confidence; final cut must be audibly verified after ingestion."
+      },
+      "intendedUse": "Twelve-second primary-source audio excerpt, with captions and no synthetic alteration of the speaker.",
+      "rights": {
+        "claim": "public_domain_us_government_work",
+        "claimSource": "Wikimedia Commons public-domain record; FDR Library catalog identifies the recording and does not attach the item-specific commercial-use warning shown on restricted entries.",
+        "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Fireside_Chat_1_On_the_Banking_Crisis_(March_12,_1933)_Franklin_Delano_Roosevelt_edited.ogg",
+        "territory": "United States",
+        "reviewStatus": "pending",
+        "decisionId": null,
+        "reviewerId": null,
+        "decidedAt": null
+      }
+    },
+    {
+      "id": "fdr-fireside-transcript-1933-03-12",
+      "sourceVersion": 1,
+      "title": "Roosevelt's Fireside Chat, 12 March 1933",
+      "provider": "Wikisource",
+      "originInstitution": "United States federal government",
+      "originIdentifier": "Fireside Chat on the Banking Crisis",
+      "catalogUrl": "https://en.wikisource.org/wiki/Roosevelt%27s_Fireside_Chat%2C_12_March_1933",
+      "downloadUrl": null,
+      "mediaType": "text/html",
+      "expectedBytes": null,
+      "expectedSha256": null,
+      "createdOrPublished": "1933-03-12",
+      "intendedUse": "Transcript evidence for narration, captions, and post-ingestion excerpt verification.",
+      "rights": {
+        "claim": "public_domain_us_government_work",
+        "claimSource": "Wikisource public-domain notice under 17 U.S.C. 105",
+        "evidenceUrl": "https://en.wikisource.org/wiki/Roosevelt%27s_Fireside_Chat%2C_12_March_1933",
+        "territory": "United States",
+        "reviewStatus": "pending",
+        "decisionId": null,
+        "reviewerId": null,
+        "decidedAt": null
+      }
+    },
+    {
+      "id": "loc-bank-holiday-context",
+      "sourceVersion": 1,
+      "title": "1933 Bank Holiday",
+      "provider": "Library of Congress Research Guides",
+      "originInstitution": "Library of Congress",
+      "originIdentifier": "This Month in Business History — March 1933",
+      "catalogUrl": "https://guides.loc.gov/this-month-in-business-history/march/1933-bank-holiday",
+      "downloadUrl": null,
+      "mediaType": "text/html",
+      "expectedBytes": null,
+      "expectedSha256": null,
+      "createdOrPublished": "2026",
+      "intendedUse": "Context evidence for the bank-holiday scenes; not a render asset.",
+      "rights": {
+        "claim": "reference_only",
+        "claimSource": "Used as factual research, not reproduced as media.",
+        "evidenceUrl": "https://guides.loc.gov/this-month-in-business-history/march/1933-bank-holiday",
+        "territory": "United States",
+        "reviewStatus": "not_required_for_reference_only",
+        "decisionId": null,
+        "reviewerId": null,
+        "decidedAt": null
+      }
+    }
+  ]
+}

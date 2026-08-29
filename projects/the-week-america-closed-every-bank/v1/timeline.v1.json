@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "timelineVersion": 1,
+  "fps": 30,
+  "durationFrames": 2100,
+  "durationSeconds": 70,
+  "scenes": [
+    {
+      "id": "cold-open",
+      "startFrame": 0,
+      "endFrame": 150,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "loc-bank-run-1931",
+        "motion": "slow-push-in"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "For one week, America closed every bank."
+      },
+      "caption": "THE WEEK AMERICA CLOSED EVERY BANK",
+      "evidenceSourceIds": ["loc-bank-run-1931"]
+    },
+    {
+      "id": "panic",
+      "startFrame": 150,
+      "endFrame": 420,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "loc-bank-run-1931",
+        "motion": "pan-left"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "By March 1933, fear had become a financial force. Depositors rushed for cash, and banks failed faster than confidence could recover."
+      },
+      "caption": "MARCH 1933",
+      "evidenceSourceIds": ["loc-bank-run-1931", "loc-bank-holiday-context"]
+    },
+    {
+      "id": "bank-holiday",
+      "startFrame": 420,
+      "endFrame": 720,
+      "visual": {
+        "kind": "typographic-card",
+        "headline": "A NATIONAL BANK HOLIDAY",
+        "motion": "paper-reveal"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "Roosevelt answered with a national bank holiday: stop the withdrawals, inspect the banks, and reopen only those judged sound."
+      },
+      "caption": "MARCH 6, 1933",
+      "evidenceSourceIds": ["loc-bank-holiday-context"]
+    },
+    {
+      "id": "trust-problem",
+      "startFrame": 720,
+      "endFrame": 1020,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "loc-bank-run-1931",
+        "motion": "slow-pull-out"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "The machinery mattered. But the deeper crisis was human: a banking system works only while people believe their money will be there."
+      },
+      "caption": "THE REAL CRISIS WAS CONFIDENCE",
+      "evidenceSourceIds": ["fdr-fireside-transcript-1933-03-12"]
+    },
+    {
+      "id": "radio-setup",
+      "startFrame": 1020,
+      "endFrame": 1380,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "nara-fdr-fireside-photo-1933-03-12",
+        "motion": "slow-push-in"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "On March 12, Roosevelt entered American homes by radio and asked the public to become part of the rescue."
+      },
+      "caption": "MARCH 12, 1933 — THE FIRST FIRESIDE CHAT",
+      "evidenceSourceIds": [
+        "nara-fdr-fireside-photo-1933-03-12",
+        "fdr-fireside-transcript-1933-03-12"
+      ]
+    },
+    {
+      "id": "archival-voice",
+      "startFrame": 1380,
+      "endFrame": 1740,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "nara-fdr-fireside-photo-1933-03-12",
+        "motion": "hold-with-film-grain"
+      },
+      "audio": {
+        "slotId": "fdr-archival-excerpt",
+        "sourceInMs": 736000,
+        "sourceOutMs": 748000,
+        "transcript": "After all, there is an element in the readjustment of our financial system more important than currency, more important than gold, and that is the confidence of the people themselves."
+      },
+      "caption": "\u201cTHE CONFIDENCE OF THE PEOPLE THEMSELVES\u201d",
+      "evidenceSourceIds": [
+        "fdr-fireside-audio-1933-03-12",
+        "fdr-fireside-transcript-1933-03-12"
+      ]
+    },
+    {
+      "id": "resolution",
+      "startFrame": 1740,
+      "endFrame": 2040,
+      "visual": {
+        "kind": "archival-image",
+        "sourceId": "loc-bank-run-1931",
+        "motion": "fade-to-warm-paper"
+      },
+      "audio": {
+        "slotId": "narration-main",
+        "text": "The banks reopened in stages. The system survived because law, liquidity, and a carefully delivered message moved together."
+      },
+      "caption": "LAW + LIQUIDITY + TRUST",
+      "evidenceSourceIds": ["loc-bank-holiday-context", "fdr-fireside-transcript-1933-03-12"]
+    },
+    {
+      "id": "end-card",
+      "startFrame": 2040,
+      "endFrame": 2100,
+      "visual": {
+        "kind": "typographic-card",
+        "headline": "CONFIDENCE IS INFRASTRUCTURE",
+        "motion": "fade-out"
+      },
+      "audio": {
+        "slotId": "music-bed",
+        "text": null
+      },
+      "caption": null,
+      "evidenceSourceIds": []
+    }
+  ]
+}

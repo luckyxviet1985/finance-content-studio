@@ -47,3 +47,19 @@
 
 ## Capacity posture
 Scale web, general worker, and render worker independently. Initial target is two long-form and five Shorts weekly; capacity planning must support one long-form and three Shorts daily without changing domain architecture.
+
+## Documentary archival ingestion
+1. Validate the immutable project bundle and confirm its Topic approval record pins the intended project/source version.
+2. Confirm every downloadable source has a human rights decision with reviewer, decision ID, timestamp, intended use, and evidence URL. A source claim alone is insufficient.
+3. Run the deterministic ingestion command. It permits only exact HTTPS origins/path prefixes, rejects redirects and credentials, enforces pinned byte length/media type/SHA-256, refuses overwrite, and writes a provenance receipt beside each asset.
+4. If a source has changed, do not update a checksum in place. Stop, review the new source bytes and rights metadata, and create a new project/source-ledger version.
+5. If an asset exists without its receipt, quarantine it and re-ingest from the last approved immutable version; do not reconstruct provenance by hand.
+
+## Documentary render recovery and QC
+1. Re-run project validation and confirm Topic and Script approvals pin current immutable versions.
+2. Confirm required audio slots are `ready` with artifact versions and SHA-256 checksums. Provider changes create a new audio-slots version.
+3. Build render props from the validated bundle; never hand-edit generated props.
+4. Render with the pinned Remotion/React versions and record the installed FFmpeg version.
+5. Run render verification. It must confirm duration, resolution, frame rate, audio presence, output checksum, dependency checksums, and approval IDs.
+6. Visually inspect representative frames, captions, archival crop/motion, and the FDR excerpt; audibly verify the excerpt against the approved transcript.
+7. Request Final Video approval against the verified video checksum. Rendering does not confer approval and this prototype contains no publishing action.

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "projectId": "the-week-america-closed-every-bank",
+  "projectVersion": 1,
+  "contractVersion": 1,
+  "networkPolicy": {
+    "httpsOnly": true,
+    "redirects": "error",
+    "credentials": "forbidden"
+  },
+  "writePolicy": {
+    "root": "public/media/the-week-america-closed-every-bank/v1",
+    "overwrite": "error",
+    "atomic": true,
+    "receiptSuffix": ".provenance.json"
+  },
+  "allowedCatalogs": [
+    {
+      "origin": "https://www.loc.gov",
+      "pathPrefixes": ["/pictures/item/"]
+    },
+    {
+      "origin": "https://commons.wikimedia.org",
+      "pathPrefixes": ["/wiki/File:"]
+    }
+  ],
+  "allowedDownloads": [
+    {
+      "origin": "https://tile.loc.gov",
+      "pathPrefixes": ["/storage-services/service/pnp/cph/"]
+    },
+    {
+      "origin": "https://upload.wikimedia.org",
+      "pathPrefixes": ["/wikipedia/commons/"]
+    }
+  ],
+  "assets": [
+    {
+      "sourceId": "loc-bank-run-1931",
+      "targetPath": "public/media/the-week-america-closed-every-bank/v1/loc-bank-run-1931.jpg",
+      "expectedMediaType": "image/jpeg",
+      "expectedBytes": 181190,
+      "expectedSha256": "50a2894e884d3bb743c1fe11ebce3686da654fb2af833cc59f795263a6b364a6",
+      "rightsReviewRequired": true
+    },
+    {
+      "sourceId": "nara-fdr-fireside-photo-1933-03-12",
+      "targetPath": "public/media/the-week-america-closed-every-bank/v1/fdr-march-12-1933.jpg",
+      "expectedMediaType": "image/jpeg",
+      "expectedBytes": 876872,
+      "expectedSha256": "241cd0f965be1852d4effd01b8add206dd404d565d1356eadfa42e7805e10946",
+      "rightsReviewRequired": true
+    },
+    {
+      "sourceId": "fdr-fireside-audio-1933-03-12",
+      "targetPath": "public/media/the-week-america-closed-every-bank/v1/fdr-fireside-chat-edited.ogg",
+      "expectedMediaType": "application/ogg",
+      "expectedBytes": 6638546,
+      "expectedSha256": "ab8d0e9229bfa9ca844828318e6ce8211a86b75a180e833296d6e0d0134ceffd",
+      "rightsReviewRequired": true
+    }
+  ]
+}

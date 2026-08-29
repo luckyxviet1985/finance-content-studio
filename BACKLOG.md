@@ -26,6 +26,15 @@
 - Complete issue #5 environment, secrets, retention, and access strategy.
 - Implement foundation through Topic Approval.
 
+## Milestone 3 prototype track
+- Review and merge issue #8: FDR archival documentary project contracts and Remotion scaffold.
+- Record a real Topic approval before invoking the prototype ingestion command.
+- Obtain human rights decisions for the LOC bank-run photograph, NARA/Wikimedia FDR photograph, and FDR archival recording.
+- Ingest the three pinned archival assets and preserve generated provenance receipts.
+- Approve the versioned script/timeline before binding a narration artifact or rendering.
+- Generate test narration through an approved provider adapter; do not add a production ElevenLabs integration in this track.
+- Render and verify the 70-second MP4, then request Final Video approval.
+
 ## Explicitly deferred
 - SaaS and billing
 - Multi-user collaboration
