@@ -146,3 +146,4 @@ vite.config.ts.timestamp-*
 public/media/
 outputs/
 work/render-props/
+work/preview-props/

@@ -73,3 +73,12 @@ Scale web, general worker, and render worker independently. Initial target is tw
 5. Run render verification. It must confirm duration, resolution, frame rate, audio presence, output checksum, dependency checksums, and approval IDs.
 6. Visually inspect representative frames, captions, archival crop/motion, and the FDR excerpt; audibly verify the excerpt against the approved transcript.
 7. Request Final Video approval against the verified video checksum. Rendering does not confer approval and this prototype contains no publishing action.
+
+## Documentary animatic preview
+
+1. Use only `npm run documentary:preview`; do not hand-edit generated preview props.
+2. Confirm the render displays the permanent preview watermark and explicit silent-audio notice on representative frames.
+3. Confirm the verification receipt reports procedural visuals only, no external media, no audible content, publishing disabled, and `publishable: false`.
+4. If preview props contain a URL, media path, provider binding, ready audio, or external-media field, stop. Do not weaken the preview contract.
+5. The preview command refuses to overwrite either an existing MP4 or its verification receipt. Preserve both together, or deliberately remove both before creating a replacement.
+6. Treat feedback as creative direction only. Any timeline/script change creates a new immutable version and still requires the normal human gates.

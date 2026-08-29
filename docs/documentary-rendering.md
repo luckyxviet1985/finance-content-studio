@@ -6,6 +6,20 @@ Project version 1 is a 70-second, 1920×1080, 30 fps archival documentary scaffo
 
 This version is structurally valid but deliberately blocked from ingestion and rendering. It has no approval records, no downloaded media, and no generated narration. It cannot upload or publish.
 
+## Preview-only animatic
+
+Issue #14 adds a separate preview composition for creative pacing review while approvals are pending:
+
+```sh
+npm run documentary:preview
+```
+
+The preview builder reads the checksummed timeline but emits a deliberately reduced props contract. It contains only procedural scene motifs, draft on-screen narration, timing, approval statuses, and timeline/render checksums. It rejects URLs, file paths, source IDs, provider bindings, ready audio, external-media fields, missing watermarking, or enabled publishing.
+
+The resulting MP4 is always marked `PREVIEW — NOT APPROVED FOR RELEASE`. It uses no archival bytes and makes no provider or publishing call. Remotion may mux a digital-silence AAC stream; verification measures it at or below -90 dB and records that no audible content is present. This silent animatic is not a Topic, Script, rights, or Final Video approval and cannot be promoted into the production render.
+
+OpenMontage narration remains unavailable until a real production checkout is configured. Do not silently substitute another voice provider. After that setup and Script Approval, bind the generated narration through the existing provider-neutral audio slot in a new immutable project version.
+
 ## Approval sequence
 
 1. Topic Approval must pin the project/source-ledger version before archival ingestion.

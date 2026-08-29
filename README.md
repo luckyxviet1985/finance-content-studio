@@ -17,6 +17,14 @@ npm run documentary:validate
 
 See `docs/documentary-rendering.md` for approval, ingestion, render, and verification procedures.
 
+To render the silent, procedural, non-publishable animatic without archival media or provider calls:
+
+```sh
+npm run documentary:preview
+```
+
+Every preview frame is watermarked, and this command does not relax the production render gates.
+
 ## Topic Approval foundation
 
 Issue #12 adds the first PostgreSQL-backed approval checkpoint. It stores immutable topic proposals, evidence snapshots, scores, exact-version decisions, and audit events; only a trusted human editor or admin may submit, review, approve, or reject. It includes a migration runner and a narrow local operator command, but no dashboard or production authentication integration.

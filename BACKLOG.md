@@ -28,6 +28,7 @@
 
 ## Milestone 3 prototype track
 - Issue #8 merged: FDR archival documentary project contracts and Remotion scaffold.
+- Review and merge issue #14: isolated, silent, procedural animatic preview with permanent non-release watermark.
 - Record a real Topic approval before invoking the prototype ingestion command.
 - Obtain human rights decisions for the LOC bank-run photograph, NARA/Wikimedia FDR photograph, and FDR archival recording.
 - Ingest the three pinned archival assets and preserve generated provenance receipts.
