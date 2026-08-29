@@ -23,6 +23,16 @@
 5. Escalate to Engineering and Compliance.
 6. Resume only after a documented decision.
 
+## Topic Approval operation and recovery
+
+1. Apply versioned migrations from a trusted backend environment and confirm no checksum drift is reported.
+2. Create or revise a topic proposal with immutable evidence snapshots, score provenance, and policy provenance, then submit the exact current version for review.
+3. Confirm the pending view shows the intended version ID and dependency SHA-256 before deciding. Only an authenticated human editor or admin may continue.
+4. Use one stable idempotency key per intended decision. An exact retry is safe; a conflict indicates different request content and must be investigated.
+5. If content, evidence, score, or policy changes, create a revision. Confirm the workflow returns to `draft` and obtain a new decision; never reuse the old approval.
+6. If a direct mutation or illegal transition is reported, freeze the workflow and preserve the error and audit records. Do not bypass the database trigger.
+7. Reconcile the workflow, immutable decision, pinned dependency hash, and ordered audit events before resuming downstream work.
+
 ## Incorrect YouTube publication
 1. Reconcile remote state.
 2. Set private if authorized and safe.
