@@ -6,6 +6,8 @@
   "scripts": {
     "test": "node --test tests/**/*.test.mjs",
     "typecheck": "tsc --noEmit",
+    "db:migrate": "node scripts/database/migrate.mjs",
+    "topic:operator": "node scripts/topic-approval/operator.mjs",
     "documentary:validate": "node scripts/documentary/validate-project.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
     "documentary:ingest": "node scripts/documentary/ingest-media.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
     "documentary:render-props": "node scripts/documentary/build-render-props.mjs projects/the-week-america-closed-every-bank/v1/project.manifest.json",
@@ -14,11 +16,13 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.518",
+    "pg": "8.23.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "remotion": "4.0.518"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "typescript": "7.0.2"

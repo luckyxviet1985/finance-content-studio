@@ -10,7 +10,7 @@ Review cadence: weekly during the vertical slice and at every approval gate.
 | R-004 | Copyright, licensing, or likeness misuse | High | Versioned rights ledger, exact source allowlists, pinned checksums, blocked ingestion until human review, generated-asset provenance | Editorial | Open |
 | R-005 | OpenAI or YouTube outage/rate limit | High | Provider interfaces, bounded retries, pause/recovery, reconciliation | Operations | Open |
 | R-006 | Duplicate upload or external mutation | High | Stable idempotency keys and remote-state reconciliation | Engineering | Open |
-| R-007 | Approval applied to changed artifact | Critical | Immutable versions, dependency hashes, automatic invalidation | Engineering | Open |
+| R-007 | Approval applied to changed artifact | Critical | Immutable versions, pinned dependency hashes, row-locked decisions, guarded state transitions, automatic invalidation, append-only audit | Engineering | Mitigated for Topic Approval |
 | R-008 | Supabase/OpenAI/YouTube secrets exposed | Critical | Secret stores, scoped credentials, redaction, scanning, rotation | Security | Open |
 | R-009 | Model drift degrades quality | High | Model/prompt versioning, golden evaluations, recorded promotion | AI Lead | Open |
 | R-010 | Cost runaway | High | Task budgets, token/media limits, cost telemetry, cancellation | Operations | Open |

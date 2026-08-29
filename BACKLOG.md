@@ -3,12 +3,12 @@
 ## Current critical path
 
 1. Repository and CI foundation
-2. Supabase schema and local development contract
-3. Lightweight durable workflow state machine
-4. Artifact, source, claim, provenance, and approval primitives
-5. Topic candidate ingestion and evidence capture
-6. Versioned topic scoring
-7. Topic approval API and operator view
+2. Supabase schema and local development contract — Topic Approval slice ready for review
+3. Lightweight durable workflow state machine — Topic Approval states implemented
+4. Artifact, source, claim, provenance, and approval primitives — topic scope implemented
+5. Topic candidate ingestion and evidence capture — deterministic topic contract implemented
+6. Versioned topic scoring — persisted immutable score implemented
+7. Topic approval API and operator view — domain service and narrow local CLI implemented; production auth/UI deferred
 8. Research agent and dossier
 9. Script agent and claim extraction
 10. Fact check and educational-content compliance
@@ -24,10 +24,10 @@
 - Complete issue #3 repository and CI standards.
 - Complete issue #4 threat model and data classification.
 - Complete issue #5 environment, secrets, retention, and access strategy.
-- Implement foundation through Topic Approval.
+- Merge issue #12, provision the development Supabase connection, and record the first real Topic Approval through a trusted human operator.
 
 ## Milestone 3 prototype track
-- Review and merge issue #8: FDR archival documentary project contracts and Remotion scaffold.
+- Issue #8 merged: FDR archival documentary project contracts and Remotion scaffold.
 - Record a real Topic approval before invoking the prototype ingestion command.
 - Obtain human rights decisions for the LOC bank-run photograph, NARA/Wikimedia FDR photograph, and FDR archival recording.
 - Ingest the three pinned archival assets and preserve generated provenance receipts.

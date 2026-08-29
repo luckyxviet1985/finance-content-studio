@@ -15,11 +15,12 @@ In progress
 - Four mandatory human approval gates established.
 - Initial ADRs, risk register, backlog, and runbook recorded.
 - Issue #8 FDR Documentary Factory prototype scaffold completed on a review branch: immutable project bundle, 70-second scene timeline, archival rights ledger, provider-neutral audio slots, deterministic media-ingestion contract, Remotion composition, and contract tests.
+- Issue #12 Topic Approval vertical slice completed on a review branch: versioned PostgreSQL migration, immutable topic/evidence/score records, guarded workflow transitions, human-only decisions, idempotency handling, audit history, local operator command, and database integration tests.
 
 ## In progress
 - Updating tracking to the approved vertical-slice plan.
 - Establishing repository and implementation foundation.
-- Building persisted workflow, evidence, and topic-approval primitives.
+- Reviewing and integrating the persisted Topic Approval checkpoint from issue #12.
 - Reviewing and integrating issue #8 without advancing its pending Topic, Script, Final Video, or Public Publishing approvals.
 
 ## Documentary prototype readiness
@@ -37,4 +38,4 @@ In progress
 These do not block local foundation work.
 
 ## Next approval gate
-A functioning Topic Approval checkpoint with persisted topic evidence, score, workflow state, and immutable approval record.
+Provision the development Supabase connection, migrate it, submit the FDR topic package, and have an authenticated human editor record the first Topic Approval decision. No approval has been fabricated by implementation or test fixtures.
