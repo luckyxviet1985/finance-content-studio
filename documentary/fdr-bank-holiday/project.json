@@ -1,0 +1,30 @@
+{
+  "project_id": "doc-fdr-bank-holiday-1933-v1",
+  "title": "The Week America Closed Every Bank",
+  "format": "documentary_short",
+  "target_duration_seconds": 72,
+  "aspect_ratio": "16:9",
+  "fps": 30,
+  "status": "prototype",
+  "approval_gates": ["topic", "script", "final_video", "public_publishing"],
+  "narration": {
+    "provider": "open_montage_test_voice",
+    "adapter": "voice_provider",
+    "replaceable": true
+  },
+  "audio_insert": {
+    "source_id": "src-fdr-fireside-audio",
+    "start_seconds": 736,
+    "end_seconds": 748,
+    "purpose": "authentic historical primary-source insert"
+  },
+  "render": {
+    "engine": "remotion_ffmpeg",
+    "composition_id": "DocumentaryShort",
+    "deterministic": true
+  },
+  "publishing": {
+    "enabled": false,
+    "private_upload_only_after_final_video_approval": true
+  }
+}

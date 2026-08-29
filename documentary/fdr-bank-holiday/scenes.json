@@ -1,0 +1,72 @@
+[
+  {
+    "id": "scene-01",
+    "start": 0,
+    "duration": 6,
+    "type": "archive_photo",
+    "source_id": "src-loc-bank-run-photo",
+    "narration": "In 1933, America did something almost unimaginable. It closed every bank in the country.",
+    "motion": "slow_push",
+    "overlay": "EVERY BANK. CLOSED."
+  },
+  {
+    "id": "scene-02",
+    "start": 6,
+    "duration": 10,
+    "type": "archive_montage",
+    "source_ids": ["src-loc-bank-run-photo"],
+    "narration": "Years of bank failures had shattered confidence. Americans rushed to withdraw their savings, and even sound banks struggled to meet the demand.",
+    "motion": "pan_and_crop",
+    "overlay": "THE PANIC"
+  },
+  {
+    "id": "scene-03",
+    "start": 16,
+    "duration": 9,
+    "type": "archive_photo",
+    "source_id": "src-fdr-fireside-photo",
+    "narration": "Less than forty-eight hours after taking office, Franklin Roosevelt suspended banking transactions across the nation.",
+    "motion": "slow_push",
+    "overlay": "MARCH 6, 1933"
+  },
+  {
+    "id": "scene-04",
+    "start": 25,
+    "duration": 12,
+    "type": "primary_source_audio",
+    "source_id": "src-fdr-fireside-audio",
+    "audio_start_seconds": 736,
+    "audio_end_seconds": 748,
+    "visual_source_id": "src-fdr-fireside-photo",
+    "overlay": "FDR • FIRST FIRESIDE CHAT"
+  },
+  {
+    "id": "scene-05",
+    "start": 37,
+    "duration": 10,
+    "type": "motion_graphic",
+    "narration": "The government began examining banks and reopening the institutions it considered strong enough to survive.",
+    "graphic": "closed_to_audited_to_reopened",
+    "overlay": "AUDIT → REOPEN"
+  },
+  {
+    "id": "scene-06",
+    "start": 47,
+    "duration": 12,
+    "type": "archive_montage",
+    "source_ids": ["src-loc-bank-run-photo", "src-fdr-fireside-photo"],
+    "narration": "When banks reopened, the panic began to reverse. Americans started returning money to the banking system instead of pulling it out.",
+    "motion": "documentary_montage",
+    "overlay": "CONFIDENCE RETURNS"
+  },
+  {
+    "id": "scene-07",
+    "start": 59,
+    "duration": 13,
+    "type": "archive_photo",
+    "source_id": "src-fdr-fireside-photo",
+    "narration": "Roosevelt had not simply reopened the banks. He had helped restore the thing the financial system needed most: trust.",
+    "motion": "slow_pull",
+    "overlay": "THE REAL CURRENCY WAS TRUST"
+  }
+]
